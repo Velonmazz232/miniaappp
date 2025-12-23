@@ -1,0 +1,12 @@
+# netlify.toml
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self' https://telegram.org; script-src 'self' https://telegram.org https://core.telegram.org; style-src 'self' 'unsafe-inline';"
+    X-Frame-Options = "ALLOWALL"
+
+# Для SPA (React, Vue, Angular) - перенаправление всех путей на index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
