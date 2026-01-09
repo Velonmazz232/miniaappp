@@ -175,6 +175,22 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+.city-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.city-badge-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
 /* Бейдж города */
 .city-badge {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -186,6 +202,35 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
+}
+
+/* Кнопка Support */
+.support-btn {
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.support-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.support-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 }
 
 /* Улучшенные карточки категорий */
@@ -785,6 +830,20 @@ body {
     .city-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .city-info-wrapper {
+        flex-wrap: nowrap;
+    }
+    
+    .support-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+    
+    .city-badge-wrapper {
+        flex: 0 1 auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -817,5 +876,48 @@ body {
     .selector {
         justify-content: center;
         margin-top: 12px;
+    }
+    
+    /* Адаптация city-info-card для мобильных */
+    .city-info-wrapper {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .city-badge-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .support-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .city-badge {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Средние экраны (планшеты) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .city-info-wrapper {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .support-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        flex: 0 1 auto;
+    }
+    
+    .city-badge-wrapper {
+        flex: 1 1 auto;
+        min-width: 200px;
     }
 }

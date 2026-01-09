@@ -35,6 +35,17 @@ function goToHome(){
     document.querySelector('.nav-item[data-page="page-home"]').classList.add('active'); 
 }
 
+function openSupport(){
+    const username = 'candyoperator44';
+    if (window.Telegram?.WebApp) {
+        // Используем Telegram WebApp API для открытия профиля
+        window.Telegram.WebApp.openTelegramLink(`https://t.me/${username}`);
+    } else {
+        // Fallback для обычных браузеров
+        window.open(`https://t.me/${username}`, '_blank');
+    }
+}
+
 // 🔥 ИНИЦИАЛИЗАЦИЯ ПРИЛОЖЕНИЯ
 document.addEventListener('DOMContentLoaded', ()=>{
     const cityGrid = document.getElementById('cityGrid');

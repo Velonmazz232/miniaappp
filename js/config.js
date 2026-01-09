@@ -220,4 +220,4 @@ let selectedCurrency = null;
 let selectedNetwork = null;
 let currentPaymentData = null;
 let paymentCheckInterval = null;
-const cityList = ["London","Manchester","Birmingham","Cambridge","Edinburgh","Oxford","Portsmouth","Bedford","Norwich","Glasgow","Egham","Harlow"];
+const cityList = ["London","Reading","Slough","Oxford","Egham","Richmond","Windsor","Staines","Feltham"];
